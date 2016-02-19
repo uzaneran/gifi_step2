@@ -29,9 +29,7 @@
             <div id="video">
                 <div id="player"></div>
 
-                <select id="user-select">
-                    <option>Choose friend...</option>
-                </select>
+                <select id="user-select"></select>
 
                 <div class="buttons">
                     <button id="play" type="button">PLAY</button>
@@ -69,16 +67,16 @@
             }
 
 //creates the select&options Html markup
-            var markup = ['<option value="none" disabled selected>Select friend</option>'];
+            var markup = '<option value="none" disabled selected>Choose friend</option>';
 
-//Get json file with the user's details
+            //Get json file with the user's details
             $.getJSON("http://learn.gifi.co.il/api/users/", function (result) {
 
                 $.each(result.users, function (key, value) {
-                    markup.push("<option value='" + value.video + "'>" + value.fullname + "</option>")
+                    markup +="<option value='" + value.video + "'>" + value.fullname + "</option>";
                 });
 
-                $("#user-select").html(markup.join("")).on('change', function () {
+                $("#user-select").html(markup).on('change', function () {
 
                     //get the video id
                     var videoId = $(this).val().split("v=")[1];
@@ -86,10 +84,6 @@
                     player.loadVideoById(videoId)
                 });
             });
-
-
-
-
         </script>
     </body>
 </html>
