@@ -1,5 +1,8 @@
 # gifi_step2
 
+# you can add all the files to one directory for a seperated files type (html,css,js) 
+# or just open the master_index.php (includes css/js)
+
 Step_2 was really hard for me to do, for some reasons
 
 a. The API is kind of new for me.
