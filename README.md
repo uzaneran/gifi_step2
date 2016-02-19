@@ -9,7 +9,7 @@ Step_2 was really hard for me to do, for some reasons
 
 a. The API is kind of new for me.
 b. I never used GIT before.
-c. I had to look deep in the js/jquery documentations to find methods and explore them, to refresh my memory
+c. I had to look deep in the js/jquery documentations to find methods and explore them, to refresh my memory,
    for example, 
    in PHP i know how to run 'foreach' loop and create the Html markups, and i had to find the way to do so in js.
 
