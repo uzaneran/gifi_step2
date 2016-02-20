@@ -61,12 +61,12 @@
                 }
             }
 
-// The API will call this function when the video player is ready.
+            // The API will call this function when the video player is ready.
             function onPlayerReady(event) {
                 event.target.playVideo();
             }
 
-//creates the select&options Html markup
+            //creates the select&options Html markup
             var markup = '<option value="none" disabled selected>Choose friend</option>';
 
             //Get json file with the user's details
@@ -77,10 +77,9 @@
                 });
 
                 $("#user-select").html(markup).on('change', function () {
-
-                    //get the video id
-                    var videoId = $(this).val().split("v=")[1];
-
+                    //get the video id               
+                    var videoId = $(this).val().indexOf("v=") != -1 ? $(this).val().split("v=")[1]: '7eKppS5cDKk';
+                    console.log(videoId);
                     player.loadVideoById(videoId)
                 });
             });
